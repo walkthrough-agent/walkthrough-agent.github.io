@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthrough Agent</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .authors {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .links {
+            margin-bottom: 30px;
+        }
+        .links a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 8px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .links a:hover {
+            background-color: #2980b9;
+        }
+        .abstract {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 40px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>From Level 1 to Victory: Progressive VLM Game Agent via Adaptive Multimodal Walkthroughs</h1>
+        
+        <div class="authors">
+            <strong>Anonymous Authors</strong>
+        </div>
+
+        <div class="links">
+            <a href="#">Paper (Coming Soon)</a>
+            <a href="#">Code (Coming Soon)</a>
+            <a href="#">Dataset</a>
+        </div>
+    </div>
+
+    <h2>Abstract</h2>
+    <div class="abstract">
+        <p>Game agents based on Vision-Language Models (VLMs) have shown significant promise, yet they face challenges in navigating complex environments. These agents generally perform well at the early stages of a game, but their success rates drop substantially when the difficulty rises. Consequently, enabling an agent to conquer advanced game levels, or complete the game entirely, remains a formidable challenge.</p>
+        <p>Empirically, humans often consult external walkthroughs to solve difficult game levels. In this paper, we introduce the Walkthrough Agent, an innovative framework designed to empower agents to adaptively utilize extensive, unstructured, and complex multimodal walkthroughs for completing highly challenging game levels.</p>
+        <p>Specifically, our framework is composed of three modules: 1) Gather: automatically collects raw multimodal walkthroughs. 2) Reasoner: processes noisy information from these walkthroughs using a "Think-then-Plan" mechanism. Supported by a three-stage progressive training paradigm, this module trains the agent to locate key instructional areas, reason alongside real-time visual states, and generate aligned action plans. 3) Executor: translates these high-level plans into visually-grounded, executable actions.</p>
+        <p>Extensive evaluations show that our framework effectively filters out interference from noisy walkthroughs and significantly enhances success rates across the most challenging levels. Moreover, utilizing only 1,000 samples for the three-stage training based on the Qwen2.5-VL-7B model, we significantly outperform closed-source counterparts in exploiting cluttered walkthroughs to conquer advanced levels.</p>
+    </div>
+
+    <h2>Methodology</h2>
+    <p>Our framework employs a Think-then-Plan mechanism supported by a three-stage progressive training paradigm to adaptively utilize multimodal walkthroughs.</p>
+    </body>
+</html>
