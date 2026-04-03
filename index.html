@@ -1,82 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Walkthrough Agent</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .authors {
-            font-size: 1.2em;
-            color: #555;
-            margin-bottom: 20px;
-        }
-        .links {
-            margin-bottom: 30px;
-        }
-        .links a {
-            display: inline-block;
-            margin: 0 10px;
-            padding: 8px 15px;
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .links a:hover {
-            background-color: #2980b9;
-        }
-        .abstract {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-left: 4px solid #3498db;
-            margin-bottom: 40px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="">
+  <meta name="keywords" content="VLA, VLM, Action, Game, Agent">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CombatVLA</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
 <body>
 
-    <div class="header">
-        <h1>From Level 1 to Victory: Progressive VLM Game Agent via Adaptive Multimodal Walkthroughs</h1>
-        
-        <div class="authors">
-            <strong>Anonymous Authors</strong>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">CombatVLA: An Efficient Vision-Language-Action Model for Combat Tasks in 3D Action Role-Playing Games</h1>
+
+          <div class="is-size-3 publication-conference">
+            <span class="conference-badge">ICCV 2025</span>
+          </div>
+
+          <br>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+<!--               <strong>Anonymous Author(s)</strong> -->
+              <strong>Peng Chen</strong>*&nbsp;,&nbsp;<strong>Pi Bu</strong>*&nbsp;,&nbsp;<strong>Yingyao Wang</strong>&nbsp;,&nbsp;
+              <strong>Xinyi Wang</strong>&nbsp;,&nbsp;<strong>Ziming Wang</strong>&nbsp;,&nbsp;<strong>Jie Guo</strong><br>&nbsp;
+              <strong>Yingxiu Zhao</strong>&nbsp;,&nbsp;<strong>Qi Zhu</strong>&nbsp;,&nbsp;<strong>Jun Song</strong>†&nbsp;,&nbsp;
+              <strong>Siran Wang</strong>&nbsp;,&nbsp;<strong>Jiamang Wang</strong>&nbsp;,&nbsp;<strong>Bo Zheng</strong>
+            </span>
+            <div class="institution-block is-size-4">
+              Alibaba Group
+            </div>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://github.com/ChenVoid/CombatVLA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/ChenVoid/CombatVLA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="links">
-            <a href="#">Paper (Coming Soon)</a>
-            <a href="#">Code (Coming Soon)</a>
-            <a href="#">Dataset</a>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="video-block" style="margin-bottom: 3rem;">
+        <h3 class="title is-4 has-text-centered" style="margin-bottom: 1rem;">
+          Task Demonstrations (Tasks 1-13)
+        </h3>
+        <div style="text-align: center;">
+          <video controls width="840" height="472">
+            <source src="./static/videos/task1_13.mp4" type="video/mp4">
+          </video>
         </div>
-    </div>
+      </div>
 
-    <h2>Abstract</h2>
-    <div class="abstract">
-        <p>Game agents based on Vision-Language Models (VLMs) have shown significant promise, yet they face challenges in navigating complex environments. These agents generally perform well at the early stages of a game, but their success rates drop substantially when the difficulty rises. Consequently, enabling an agent to conquer advanced game levels, or complete the game entirely, remains a formidable challenge.</p>
-        <p>Empirically, humans often consult external walkthroughs to solve difficult game levels. In this paper, we introduce the Walkthrough Agent, an innovative framework designed to empower agents to adaptively utilize extensive, unstructured, and complex multimodal walkthroughs for completing highly challenging game levels.</p>
-        <p>Specifically, our framework is composed of three modules: 1) Gather: automatically collects raw multimodal walkthroughs. 2) Reasoner: processes noisy information from these walkthroughs using a "Think-then-Plan" mechanism. Supported by a three-stage progressive training paradigm, this module trains the agent to locate key instructional areas, reason alongside real-time visual states, and generate aligned action plans. 3) Executor: translates these high-level plans into visually-grounded, executable actions.</p>
-        <p>Extensive evaluations show that our framework effectively filters out interference from noisy walkthroughs and significantly enhances success rates across the most challenging levels. Moreover, utilizing only 1,000 samples for the three-stage training based on the Qwen2.5-VL-7B model, we significantly outperform closed-source counterparts in exploiting cluttered walkthroughs to conquer advanced levels.</p>
-    </div>
+      <div class="video-block">
+        <h3 class="title is-4 has-text-centered" style="margin-bottom: 1rem;">
+          Inference Speed Comparison
+        </h3>
+        <div style="text-align: center;">
+          <video controls width="840" height="472">
+            <source src="./static/videos/comparison.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
 
-    <h2>Methodology</h2>
-    <p>Our framework employs a Think-then-Plan mechanism supported by a three-stage progressive training paradigm to adaptively utilize multimodal walkthroughs.</p>
-    </body>
+      <h2 class="subtitle has-text-centered" style="margin-top: 2rem;">
+        We propose CombatVLA, the first efficient visual-language action model designed for combat tasks in 3D action role-playing games. 
+        For efficient decision making, our CombatVLA is a 3B model that processes visual inputs and outputs a sequence of actions to control 
+        the game (including keyboard and mouse operations). Above are fully anonymous demo videos showcasing the practical tests of CombatVLA in "Black Myth: Wukong" and "Sekiro: Shadows Die Twice." 
+        The first video demonstrates tasks 1 to 13, while the second video compares our model's inference speed with the baseline.
+      </h2>
+    </div>
+  </div>
+</section>
+
+      
+    
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent advances in Vision-Language-Action models (VLAs) have expanded the capabilities of embodied intelligence. 
+            However, significant challenges remain in real-time decision-making in complex 3D environments, which demand second-level responses, high-resolution perception, 
+            and tactical reasoning under dynamic conditions. To advance the field, we introduce CombatVLA, an efficient VLA model optimized for combat tasks in 3D action role-playing games(ARPGs). 
+            Specifically, our CombatVLA is a 3B model trained on video-action pairs collected by an action tracker, where the data is formatted as action-of-thought (AoT) sequences. 
+            Thereafter, CombatVLA seamlessly integrates into an action execution framework, allowing efficient inference through our truncated AoT strategy. 
+            Experimental results demonstrate that CombatVLA not only outperforms all existing models on the combat understanding benchmark but also achieves a 50-fold acceleration in game combat. 
+            Moreover, it has a higher task success rate than human players. We will open-sourcing all resources, including the action tracker, dataset, model weights, training code, and framework implementation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Pipeline of CombatVLA</h2>
+        <div class="content has-text-justified">
+          <img src="./static/videos/combatvla.png" alt="CombatVLA">
+          <p>
+            <br>
+            (a) An action tracker collects human data on keyboard and mouse use. (b) Three types of AoT training data collected by the action tracker are used for progressive learning. 
+            (c) Combat understanding benchmark (namely CUBench) assesses the model's combat IQ in three areas: gathering, comprehension, and reasoning. 
+            (d) CombatVLA model is trained on AoT data with the constraint of action alignment loss and modality contrastive loss. (e) Deployment of CombatVLA to operate real PCs.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+
+
+</section>
+
+
+</body>
 </html>
