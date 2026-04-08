@@ -94,12 +94,25 @@
         <h3 class="title is-4 has-text-centered" style="margin-bottom: 1rem;">
           Walkthrough Agent Demonstrations
         </h3>
-        <div style="text-align: center;">
-          <video controls width="840" height="472">
-            <source src="./static/videos/task1_13.mp4" type="video/mp4">
-          </video>
+        
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item has-text-centered">
+            <video controls autoplay muted loop playsinline width="840" height="472">
+              <source src="./static/videos/ace.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item has-text-centered">
+            <video controls autoplay muted loop playsinline width="840" height="472">
+              <source src="./static/videos/mario.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item has-text-centered">
+            <video controls autoplay muted loop playsinline width="840" height="472">
+              <source src="./static/videos/sokoban.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
-      </div>
+        </div>
 
       <h2 class="subtitle has-text-centered" style="margin-top: 2rem;">
         We propose Walkthrough Agent, a novel framework that enables VLM-based game agents to adaptively identify relevant clues from redundant external walkthroughs and, through reasoning, derive appropriate actions for successful execution, thereby completing more challenging game levels.
@@ -145,6 +158,17 @@
     <br>
   </div>
 </section>
+
+<script>
+  $(document).ready(function() {
+    var carousels = bulmaCarousel.attach('.carousel', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      loop: true,
+      autoplay: false,
+    });
+  });
+</script>
 
 </body>
 </html>
